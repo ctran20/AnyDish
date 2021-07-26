@@ -16,18 +16,19 @@ const CategoryGrid = (props) => {
         TouchableCmp = TouchableNativeFeedback;
     }
 
+    const imgs = { uri: 'https://raw.githubusercontent.com/ctran20/AnyDish/master/images/' + props.imgUrl };
+
     return (
         <View style={styles.gridItem}>
-            <TouchableCmp style={{ flex: 1 }} onPress={props.onSelect}>
-                <ImageBackground source={require('../images/italians.jpeg')} style={styles.image}>
+            <ImageBackground source={imgs} style={styles.image}>
+                <TouchableCmp style={{ flex: 1 }} onPress={props.onSelect}>
                     <View style={styles.container}>
                         <View style={{ ...styles.textBox, ...{ backgroundColor: props.color } }}>
                             <Text style={styles.title} numberOfLines={2}>{props.title}</Text>
                         </View>
-
                     </View>
-                </ImageBackground>
-            </TouchableCmp >
+                </TouchableCmp >
+            </ImageBackground>
         </View>
     );
 }

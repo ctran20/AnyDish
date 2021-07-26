@@ -2,16 +2,16 @@ import Category from '../models/category';
 import Meal from '../models/meals';
 
 export const CATEGORIES = [
-  new Category('c1', 'Italian', '#41d95ddd', '../images/italians.jpeg'),
-  new Category('c2', 'Quick & Easy', '#f54242dd', '../images/quick.jpeg'),
-  new Category('c3', 'Hamburgers', '#f5a442dd', '../images/hamburgers.jpeg'),
-  new Category('c4', 'German', '#f5d142dd', '../images/german.jpeg'),
-  new Category('c5', 'Light & Lovely', '#368dffdd', '../images/light.jpeg'),
-  new Category('c6', 'Exotic', '#f5428ddd', '../images/exotic.jpeg'),
-  new Category('c7', 'Breakfast', '#9eecffdd', '../images/breakfast.jpeg'),
-  new Category('c8', 'Asian', '#b9ffb0dd', '../images/asian.jpeg'),
-  new Category('c9', 'French', '#ffc7ffdd', '../images/french.jpeg'),
-  new Category('c10', 'Summer', '#47fceddd', '../images/summer.jpeg')
+  new Category('c1', 'Italian', '#41d95ddd', 'italians.jpeg'),
+  new Category('c2', 'Quick & Easy', '#f54242dd', 'quick.jpeg'),
+  new Category('c3', 'Hamburgers', '#f5a442dd', 'hamburgers.jpeg'),
+  new Category('c4', 'German', '#f5d142dd', 'german.jpeg'),
+  new Category('c5', 'Light & Lovely', '#368dffdd', 'light.jpeg'),
+  new Category('c6', 'Exotic', '#f5428ddd', 'exotic.jpeg'),
+  new Category('c7', 'Breakfast', '#9eecffdd', 'breakfast.jpeg'),
+  new Category('c8', 'Asian', '#b9ffb0dd', 'asian.jpeg'),
+  new Category('c9', 'French', '#ffc7ffdd', 'french.jpeg'),
+  new Category('c10', 'Summer', '#47fceddd', 'summer.jpeg')
 ];
 
 export const MEALS = [

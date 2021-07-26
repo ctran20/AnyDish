@@ -15,9 +15,9 @@ const MealItem = props => {
                         </ImageBackground>
                     </View>
                     <View style={{ ...styles.mealRow, ...styles.mealDetail }}>
-                        <DefaultText>{props.duration} mins</DefaultText>
-                        <DefaultText>{props.complexity.toUpperCase()} </DefaultText>
-                        <DefaultText>{props.affordability.toUpperCase()}</DefaultText>
+                        <Text style={styles.description} >{props.duration} mins</Text>
+                        <Text style={styles.description}>{props.complexity.toUpperCase()} </Text>
+                        <Text style={styles.description}>{props.affordability.toUpperCase()}</Text>
                     </View>
                 </View>
             </TouchableOpacity>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     mealItem: {
         height: 200,
         width: '100%',
-        backgroundColor: '#dfdfdf',
+        backgroundColor: '#2f2f2f',
         borderRadius: 10,
         marginBottom: 20,
         overflow: 'hidden'
@@ -60,9 +60,13 @@ const styles = StyleSheet.create({
         height: '15%',
         paddingHorizontal: 10,
         justifyContent: 'space-between',
-        alignContent: 'center'
+        alignContent: 'center',
+        marginTop: 2
+    },
+    description: {
+        color: 'white',
+        fontFamily: 'open-sans'
     }
-
 
 });
 
