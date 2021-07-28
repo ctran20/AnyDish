@@ -21,7 +21,7 @@ export const MEALS = [
     'Spaghetti with Tomato Sauce',
     'affordable',
     'simple',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+    'https://www.cookingclassy.com/wp-content/uploads/2012/11/spaghetti+with+meat+sauce11.jpg',
     20,
     [
       '4 Tomatoes',
@@ -333,5 +333,75 @@ export const MEALS = [
     true,
     true,
     true
-  )
+  ),
+  new Meal(
+    'm11',
+    ['c1', 'c10'],
+    'Gourmet Pizza',
+    'luxurious',
+    'hard',
+    'https://www.seasonsandsuppers.ca/wp-content/uploads/2020/05/homemade-pizza-4-3.jpg',
+    30,
+    [
+      '3 3/4 cups all-purpose flour',
+      '1/4 tsp active dry yeast',
+      '2 tsp fine sea salt',
+      '1 1/2 cups room temperature water',
+      '28 oz canned whole tomatoes',
+      '1-2 cloves garlic',
+      '1 Tbsp extra-virgin olive oil',
+      '1 tsp dried oregano leaves',
+      '1 tsp dried basil',
+      '1/2 tsp salt'
+    ],
+    [
+      'Prepare the Dough (Approximately 18-24 hours ahead)',
+      'Divide and rest the dough (Approximately 1 hour before you want to assemble your pizzas)',
+      'Shape the pizza',
+      'Add the toppings',
+      'Bake your pizza',
+      'Trim the parchment paper close to your pizza'
+    ],
+    false,
+    false,
+    false,
+    true
+  ),
+  new Meal(
+    'm12',
+    ['c3', 'c6', 'c8'],
+    'Moroccan Spiced Burger',
+    'pricey',
+    'hard',
+    'https://images.food52.com/w45LRz-mW2PT7TjBk8I5IfAvul4=/1008x672/filters:format(webp)/c43f27e8-07d9-4a6e-9108-0bff99cb466f--Moroccan_Burger.jpg',
+    45,
+    [
+      '1 pound Ground Beef',
+      '5 Eggs',
+      '2 Cloves of Garlic, minced',
+      '1/2 Onion, diced',
+      '1 tablespoon salt',
+      '1 teaspoon black pepper',
+      '1 tablespoon cumin',
+      '1 tablespoon coriander',
+      '1 teaspoon cinnamon',
+      '1 teaspoon cayenne',
+      '1 teaspoon tumeric',
+      '1 handful Basil',
+      '1 handful Arugula',
+      '4 Hamburger Buns'
+    ],
+    [
+      'Form 2 patties',
+      'Fry the patties for c. 4 minutes on each side',
+      'Quickly fry the buns for c. 1 minute on each side',
+      'Bruch buns with ketchup',
+      'In a skillet, fry eggs in butter until over easy. Do not flip the eggs!',
+      'Serve burger with tomato, cucumber and onion'
+    ],
+    false,
+    false,
+    false,
+    true
+  ),
 ];

@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
-import DefaultText from './DefaultText';
 
 const MealItem = props => {
     return (

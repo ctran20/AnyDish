@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         margin: 15,
         height: 150,
         borderRadius: 10,
-        overflow: Platform.OS === 'android' ? 'hidden' : 'visible',
+        overflow: 'hidden',
         elevation: 6,
     },
     container: {
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     },
     image: {
         width: '100%',
-        height: '100%'
+        height: '100%',
     },
     textBox: {
         backgroundColor: '#ffffffdb',
