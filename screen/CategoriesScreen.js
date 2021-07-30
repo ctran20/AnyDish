@@ -34,9 +34,7 @@ CategoriesScreen.navigationOptions = (navData) => {
                     navData.navigation.toggleDrawer();
                 }} />
         </HeaderButtons>
-
     }
-
 };
 
 export default CategoriesScreen;

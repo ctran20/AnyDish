@@ -1,8 +1,17 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View, Text, StyleSheet, Switch, Platform } from 'react-native';
+import {
+    View,
+    Text,
+    StyleSheet,
+    Switch,
+    Platform,
+    Alert
+} from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import { useDispatch } from 'react-redux';
 import HeaderButton from '../components/HeaderButton';
 import Colors from '../constants/Color';
+import { setFilters } from '../store/actions/meals';
 
 const FilterSwitch = props => {
     return (<View style={styles.filterContainer}>
@@ -22,6 +31,7 @@ const FilterScreen = props => {
     const [isLactoseFree, setIsLactoseFree] = useState(false);
     const [isVegan, setIsVegan] = useState(false);
     const [isVegetarian, setIsVegetarian] = useState(false);
+    const dispatch = useDispatch();
 
     const saveFilters = useCallback(() => {
         const appliedFilters = {
@@ -30,7 +40,7 @@ const FilterScreen = props => {
             vegan: isVegan,
             vegetarian: isVegetarian
         };
-        console.log(appliedFilters);
+        dispatch(setFilters(appliedFilters));
     }, [isGlutenFree, isLactoseFree, isVegan, isVegetarian]);
 
     useEffect(() => {
@@ -50,6 +60,10 @@ const FilterScreen = props => {
 };
 
 FilterScreen.navigationOptions = (navData) => {
+    const saveAlert = () => {
+        Alert.alert('', 'Filter settings saved!');
+        navData.navigation.getParam('save')();
+    }
     return {
         headerTitle: 'Filter Screen',
         headerLeft: () => <HeaderButtons HeaderButtonComponent={HeaderButton}>
@@ -63,7 +77,7 @@ FilterScreen.navigationOptions = (navData) => {
 
         headerRight: () => <HeaderButtons HeaderButtonComponent={HeaderButton}>
             <Text style={styles.saveButton}
-                onPress={navData.navigation.getParam('save')}
+                onPress={saveAlert}
             >Save</Text>
 
         </HeaderButtons>,
@@ -92,7 +106,7 @@ const styles = StyleSheet.create({
         margin: 10,
         fontSize: 15,
         fontFamily: 'open-sans-bold',
-        color: 'white'
+        color: Platform.OS === 'android' ? 'white' : Colors.extra
     }
 });
 

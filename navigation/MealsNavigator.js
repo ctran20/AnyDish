@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Platform } from 'react-native';
+import { Text, Platform, Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
@@ -100,11 +100,20 @@ const FiltersNavigator = createStackNavigator({
     }
 );
 
+function LogoTitle() {
+    return (
+        <Image
+            style={{ width: 120, height: 50 }}
+            source={require('../data/logo.png')}
+        />
+    );
+}
+
 const MainNavigator = createDrawerNavigator({
     Title: {
         screen: MealsFavTabNavigator,
         navigationOptions: {
-            drawerLabel: 'MENU',
+            drawerLabel: () => <LogoTitle />,
             backgroundColor: '#c6cbef',
         }
     },
@@ -125,6 +134,5 @@ const MainNavigator = createDrawerNavigator({
         }
 
     });
-
 
 export default createAppContainer(MainNavigator);

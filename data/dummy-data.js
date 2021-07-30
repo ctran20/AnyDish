@@ -173,7 +173,7 @@ export const MEALS = [
     'affordable',
     'hard',
     'https://cdn.pixabay.com/photo/2017/05/01/05/18/pastry-2274750_1280.jpg',
-    240,
+    40,
     [
       '4 Sheets of Gelatine',
       '150ml Orange Juice',
